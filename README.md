@@ -47,9 +47,9 @@ Em desenvolvimento. Etapas atuais:
    ```
 3. Copie o arquivo de exemplo e configure suas credenciais:
    ```bash
-   cp backend/src/main/resources/application.properties.example backend/src/main/resources/application.properties
+   cp backend/src/main/resources/application-dev.properties.example backend/src/main/resources/application-dev.properties
    ```
-   Edite o arquivo copiado com suas credenciais do PostgreSQL.
+Edite o arquivo copiado com suas credenciais do PostgreSQL local.
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/todo_list_db
 spring.datasource.username=seu_usuario
