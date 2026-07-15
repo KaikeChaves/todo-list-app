@@ -1,5 +1,6 @@
 package com.kaikechaves.todolistapi.service;
 
+import com.kaikechaves.todolistapi.exception.TarefaNotFoundException;
 import com.kaikechaves.todolistapi.model.Tarefa;
 import com.kaikechaves.todolistapi.repository.TarefaRepository;
 import org.springframework.stereotype.Service;
@@ -22,8 +23,8 @@ public class TarefaService {
         return tarefaRepository.findAll();
     }
 
-    public Tarefa buscarPorId(Long Id) {
-        return tarefaRepository.findById(Id).orElseThrow(() -> new RuntimeException("Tarefa não encontrada com o Id: " + Id));
+    public Tarefa buscarPorId(Long id) {
+        return tarefaRepository.findById(id).orElseThrow(() -> new TarefaNotFoundException(id));
     }
 
     public Tarefa atualizar(Long Id, Tarefa tarefaAtualizada) {

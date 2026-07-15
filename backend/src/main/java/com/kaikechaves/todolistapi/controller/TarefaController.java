@@ -2,6 +2,7 @@ package com.kaikechaves.todolistapi.controller;
 
 import com.kaikechaves.todolistapi.model.Tarefa;
 import com.kaikechaves.todolistapi.service.TarefaService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class TarefaController {
     }
 
     @PostMapping
-    public ResponseEntity<Tarefa> criar(@RequestBody Tarefa tarefa) {
+    public ResponseEntity<Tarefa> criar(@Valid @RequestBody Tarefa tarefa) {
         Tarefa novaTarefa = tarefaService.criar(tarefa);
         return ResponseEntity.status(HttpStatus.CREATED).body(novaTarefa);
     }
@@ -36,7 +37,7 @@ public class TarefaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Tarefa> atualizar(@PathVariable Long id, @RequestBody Tarefa tarefa) {
+    public ResponseEntity<Tarefa> atualizar(@PathVariable Long id, @Valid @RequestBody Tarefa tarefa) {
         Tarefa tarefaAtualizada = tarefaService.atualizar(id, tarefa);
         return ResponseEntity.ok(tarefaAtualizada);
     }
