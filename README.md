@@ -24,7 +24,7 @@ Em desenvolvimento. Etapas atuais:
 - [x] Planejamento e modelagem
 - [x] Configuração do projeto Spring Boot
 - [x] Implementação da API REST
-- [ ] Tratamento de erros e validação
+- [x] Tratamento de erros e validação
 - [ ] Frontend
 - [ ] Testes automatizados
 - [ ] Deploy
