@@ -25,9 +25,9 @@ Em desenvolvimento. Etapas atuais:
 - [x] Configuração do projeto Spring Boot
 - [x] Implementação da API REST
 - [x] Tratamento de erros e validação
-- [ ] Frontend
-- [ ] Testes automatizados
+- [x] Testes automatizados
 - [ ] Deploy
+- [ ] Frontend
 
 ## Como rodar o projeto
 
