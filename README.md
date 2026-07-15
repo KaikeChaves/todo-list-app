@@ -15,14 +15,45 @@ DELETE /tarefas/{id}           → remove
 
 ## Tecnologias
 - Java
+- Maven
 - Spring Boot
 - PostgreSQL
 
 ## Status do projeto 🚧
 Em desenvolvimento. Etapas atuais:
 - [x] Planejamento e modelagem
-- [ ] Configuração do projeto Spring Boot
-- [ ] Implementação da API REST
+- [x] Configuração do projeto Spring Boot
+- [x] Implementação da API REST
+- [ ] Tratamento de erros e validação
 - [ ] Frontend
 - [ ] Testes automatizados
 - [ ] Deploy
+
+## Como rodar o projeto
+
+### Pré-requisitos
+- Java 21
+- Maven
+- PostgreSQL
+
+### Passos
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/KaikeChaves/todo-list-app.git
+   ```
+2. Crie o banco de dados:
+   ```sql
+   CREATE DATABASE todo_list_db;
+   ```
+3. Configure suas credenciais em `backend/src/main/resources/application.properties`:
+```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/todo_list_db
+   spring.datasource.username=seu_usuario
+   spring.datasource.password=sua_senha
+```
+4. Rode a aplicação:
+   ```bash
+   cd backend
+   ./mvnw spring-boot:run
+   ```
+5. A API estará disponível em `http://localhost:8080`
