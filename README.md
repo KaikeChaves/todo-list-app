@@ -45,11 +45,15 @@ Em desenvolvimento. Etapas atuais:
    ```sql
    CREATE DATABASE todo_list_db;
    ```
-3. Configure suas credenciais em `backend/src/main/resources/application.properties`:
+3. Copie o arquivo de exemplo e configure suas credenciais:
+   ```bash
+   cp backend/src/main/resources/application.properties.example backend/src/main/resources/application.properties
+   ```
+   Edite o arquivo copiado com suas credenciais do PostgreSQL.
 ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/todo_list_db
-   spring.datasource.username=seu_usuario
-   spring.datasource.password=sua_senha
+spring.datasource.url=jdbc:postgresql://localhost:5432/todo_list_db
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
 ```
 4. Rode a aplicação:
    ```bash
