@@ -34,6 +34,12 @@ public class TarefaService {
         return tarefaRepository.save(tarefa);
     }
 
+    public Tarefa marcarComoConcluida(Long id) {
+        Tarefa tarefa = buscarPorId(id);
+        tarefa.setConcluida(true);
+        return tarefaRepository.save(tarefa);
+    }
+
     public void excluir(Long Id) {
         Tarefa tarefa = buscarPorId(Id);
         tarefaRepository.delete(tarefa);
