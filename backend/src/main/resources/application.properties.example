@@ -1,9 +1,7 @@
 spring.application.name=todo-list-api
-
 spring.datasource.url=jdbc:postgresql://localhost:5432/todo_list_db
-spring.datasource.username=todolist_user
-spring.datasource.password=todo1234
-
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
