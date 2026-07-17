@@ -26,10 +26,15 @@ Em desenvolvimento. Etapas atuais:
 - [x] Implementação da API REST
 - [x] Tratamento de erros e validação
 - [x] Testes automatizados
-- [ ] Deploy
+- [x] Deploy
 - [ ] Frontend
 
-## Como rodar o projeto
+## API em produção
+A API está disponível publicamente em: `https://todo-list-api-3gsr.onrender.com/`
+
+> Hospedada no plano gratuito do Render — a primeira requisição após um período de inatividade pode demorar cerca de 1 minuto para responder (o serviço "acorda" do modo de hibernação).
+
+## Como rodar o projeto localmente
 
 ### Pré-requisitos
 - Java 21
@@ -61,3 +66,49 @@ spring.datasource.password=sua_senha
    ./mvnw spring-boot:run
    ```
 5. A API estará disponível em `http://localhost:8080`
+
+## Exemplos de uso
+
+Substitua `{URL}` pela URL em produção ou por `http://localhost:8080` se estiver rodando localmente.
+
+### Criar uma tarefa
+```bash
+curl -X POST {URL}/tarefas \
+  -H "Content-Type: application/json" \
+  -d '{
+    "titulo": "Estudar Spring Boot",
+    "descricao": "Terminar o projeto",
+    "dataLimite": "2026-08-01"
+  }'
+```
+
+### Listar todas as tarefas
+```bash
+curl {URL}/tarefas
+```
+
+### Buscar uma tarefa específica
+```bash
+curl {URL}/tarefas/1
+```
+
+### Atualizar uma tarefa
+```bash
+curl -X PUT {URL}/tarefas/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "titulo": "Estudar Spring Boot - Atualizado",
+    "descricao": "Revisar conceitos",
+    "dataLimite": "2026-08-05"
+  }'
+```
+
+### Marcar tarefa como concluída
+```bash
+curl -X PATCH {URL}/tarefas/1/concluir
+```
+
+### Excluir uma tarefa
+```bash
+curl -X DELETE {URL}/tarefas/1
+```
