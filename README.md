@@ -1,7 +1,7 @@
 # TODO List App
 
 ## Descrição
-Um app contendo tanto o backend da aplicação, com a API para gerenciamento das tarefas (CRUD), quanto o front. Construído para fins de aprendizado.
+Uma API REST para gerenciamento de tarefas (CRUD), com testes automatizados e deploy em produção. Construído para fins de aprendizado.
 
 ## Funcionalidades
 ```bash
@@ -19,15 +19,14 @@ DELETE /tarefas/{id}           → remove
 - Spring Boot
 - PostgreSQL
 
-## Status do projeto 🚧
-Em desenvolvimento. Etapas atuais:
+## Status do projeto
+Projeto backend completo e funcional. Etapas realizadas:
 - [x] Planejamento e modelagem
 - [x] Configuração do projeto Spring Boot
 - [x] Implementação da API REST
 - [x] Tratamento de erros e validação
 - [x] Testes automatizados
 - [x] Deploy
-- [ ] Frontend
 
 ## API em produção
 A API está disponível publicamente em: `https://todo-list-api-3gsr.onrender.com/`
