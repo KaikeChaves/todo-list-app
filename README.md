@@ -33,6 +33,8 @@ A API está disponível publicamente em: `https://todo-list-api-3gsr.onrender.co
 
 > Hospedada no plano gratuito do Render — a primeira requisição após um período de inatividade pode demorar cerca de 1 minuto para responder (o serviço "acorda" do modo de hibernação).
 
+> ⚠️ Esta é uma API de demonstração sem autenticação — os dados são compartilhados publicamente entre quem testar. Não insira informações sensíveis.
+
 ## Como rodar o projeto localmente
 
 ### Pré-requisitos
